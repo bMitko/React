@@ -1,0 +1,8 @@
+.create {
+    display: flex;
+    justify-content: center
+}
+
+.createBtn {
+    border: solid black 1px;
+}

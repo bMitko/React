@@ -1,0 +1,52 @@
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+li {
+    height: 40px;
+    border: solid 1px;
+    border-radius: 10px;
+    font-family: inherit;
+    list-style: none;
+    font-weight: bolder;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 400px
+}
+
+.done {
+    background-color: rgb(192, 226, 249);
+}
+
+.notDone {
+    background-color: rgb(129, 195, 235);
+}
+
+.doneDesc {
+    text-decoration: line-through;
+    text-decoration-color: black;
+    text-decoration-thickness: 0.5px;
+    color: rgb(142, 139, 139)
+}
+
+.notDoneDesc {
+    text-decoration: none;
+}
+
+.notDoneBtn {
+    color: green;
+    background: none;
+    border: solid green 1px;
+}
+
+.doneBtn {
+    color: green;
+    background: none;
+    border: solid green 1px;
+    font-weight: bolder;
+}

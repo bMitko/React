@@ -1,0 +1,10 @@
+.footer {
+    font-size: smaller;
+    display: flex;
+    justify-content: end;
+    padding: 5px;
+}
+
+.logo {
+    height: 15px;
+}
