@@ -50,7 +50,7 @@ export const ProductContextProvider = (props: ProductsContextProvider) => {
         }
     }  
     catch(error){
-        setError('Failed to fetch products. Please try again.');
+        setError('Error while fetching data!');
     }
     finally {
         setLoading(false)

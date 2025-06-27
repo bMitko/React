@@ -1,6 +1,11 @@
-export const ErrorMessage = () => {
+type ErrorMessageProps = {
+    message: string;
+};
+
+export const ErrorMessage = (props: ErrorMessageProps) => {
+    const { message } = props
 
     return (
-        <h3 style={{color: 'red', justifySelf: 'center'}}>Error while fetching data!</h3>
+        <h3 style={{ color: 'red', justifySelf: 'center' }}>{message}</h3>
     )
 }

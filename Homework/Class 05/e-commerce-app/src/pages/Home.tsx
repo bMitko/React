@@ -29,7 +29,7 @@ export default function HomePage() {
                 </div>
             </div>
             {loading && <LoadingSpinner />}
-            {error && <ErrorMessage />}
+            {error && <ErrorMessage message={error} />}
             {category && !loading && !error && (
                 <>
                     <div className="productsDesc">

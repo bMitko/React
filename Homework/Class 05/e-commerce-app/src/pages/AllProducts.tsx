@@ -19,7 +19,7 @@ export default function AllProductsPage() {
                 <h2>All products</h2>
             </div>
             {loading && <LoadingSpinner />}
-            {error && <ErrorMessage />}
+            {error && <ErrorMessage message={error}/>}
 
             {!loading && !error && (<div className="productList">
                 {allProducts.map((product) => {
