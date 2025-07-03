@@ -118,7 +118,7 @@ export const AddProduct = () => {
         />
         {errors.image && <p className="error">{errors.image.message}</p>}
 
-        <button type="submit" disabled={!isValid}>{isSubmitting ? <LoadingSpinner /> : 'ADD'}</button>
+        <button disabled={!isValid}>{isSubmitting ? <LoadingSpinner /> : 'ADD'}</button>
         {successMessage && newProduct && (
           <div>
             <hr />
