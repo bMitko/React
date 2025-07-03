@@ -1,0 +1,102 @@
+.form {
+  width: 500px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: linear-gradient(90deg, #cd285f, #e05e01);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-self: center;
+  align-items: center;
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  color: white;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-weight: 500;
+}
+
+.form input {
+  width: 90%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background-color: white;
+  border-color: white;
+  font-size: 1rem;
+}
+
+.form textarea {
+  width: 90%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background-color: white;
+  border-color: white;
+  font-size: 1rem;
+}
+
+.form button {
+  width: 50%;
+  padding: 0.75rem;
+  color: #d7550e;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form button:hover {
+  background-color: #ff8400;
+  color: white;
+}
+
+.form select {
+  width: 95%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 7px;
+  background-color: white;
+  font-size: 1rem;
+}
+
+.error {
+  color: darkslategray;
+  font-size: smaller;
+  font-weight: bold;
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+button:disabled:hover {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.loader {
+  width: 15px;
+  height: 15px;
+}
+
+p {
+  color: white;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+

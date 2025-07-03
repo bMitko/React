@@ -1,0 +1,36 @@
+.headerDiv {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.headerLogo {
+    width: 4rem;
+}
+
+.navigation {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid rgb(225, 130, 47) 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: rgb(225, 130, 47);
+    font-weight: 700;
+    font-size: larger;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    border-bottom: solid rgb(225, 130, 47) 3px;
+    color: rgb(225, 130, 47);
+}

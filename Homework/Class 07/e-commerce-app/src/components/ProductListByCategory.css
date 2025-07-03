@@ -1,0 +1,18 @@
+.productsDesc h2 {
+    display: block;
+    justify-self: center;
+}
+
+.productsDesc h4 {
+    display: block;
+    justify-self: center;
+}
+
+.productList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    background: linear-gradient(90deg, #cd285f, #e05e01);
+}
