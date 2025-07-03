@@ -5,12 +5,13 @@ import { useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import './AddProduct.css'
 import LoadingSpinner from "../components/LoadingSpinner"
-import { ProductCard } from "../components/ProductCard"
+import { ErrorMessage } from "../components/ErrorMessage"
+
 
 export const AddProduct = () => {
   const navigate = useNavigate()
   const context = useContext(ProductContext)
-  const { categoryList, handleAddProduct } = context
+  const { categoryList, handleAddProduct, error } = context
 
   const [successMessage, setSuccessMessage] = useState(false)
   const [newProduct, setNewProduct] = useState<AddProductProps | null>(null)
@@ -39,6 +40,8 @@ export const AddProduct = () => {
 
   return (
     <>
+      {categoryList.length === 0 && error && <ErrorMessage message={error} />}
+      {categoryList.length !== 0 && !error && (
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
 
         <h2>Add Product</h2>
@@ -99,7 +102,7 @@ export const AddProduct = () => {
           defaultValue=""
         >
           <option value="" disabled>Pick category</option>
-          {categoryList && categoryList.map((category) => (
+          {categoryList.map((category) => (
             <option key={category} value={category}>{category}</option>
           ))}
         </select>
@@ -123,10 +126,18 @@ export const AddProduct = () => {
           <div>
             <hr />
             <p className="success">Product was successfully added! ✓</p>
-            <ProductCard product={newProduct} />
+            <div className="product-card">
+              <img src={newProduct.image} alt={newProduct.title} />
+              <div className="product-info">
+                <h3>{newProduct.title}</h3>
+                <p className="category">{newProduct.category}</p>
+                <p className="price">${newProduct.price.toFixed(2)}</p>
+              </div>
+            </div>
           </div>
         )}
       </form>
+      )}
     </>
   )
 }

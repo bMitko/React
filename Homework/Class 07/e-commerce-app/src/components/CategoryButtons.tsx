@@ -1,7 +1,6 @@
 import { useContext } from "react"
 import { ProductContext } from "../context/ProductContext"
 import LoadingSpinner from "./LoadingSpinner"
-import { ErrorMessage } from "./ErrorMessage"
 import './CategoryButtons.css'
 
 export const CategoryButtons = () => {
@@ -11,9 +10,8 @@ export const CategoryButtons = () => {
 
     return (
         <>  
-            {loading && !categoryList && <LoadingSpinner />}
-            {error && !categoryList && <ErrorMessage message={error} />}
-            {categoryList && !loading && !error && (
+            {loading && categoryList.length === 0 && <LoadingSpinner />}
+            {categoryList.length !== 0 && !loading && !error && (
                 <div className="buttonsDiv">
                     <div className="categoryBtns">
                         {categoryList.map((category) => {

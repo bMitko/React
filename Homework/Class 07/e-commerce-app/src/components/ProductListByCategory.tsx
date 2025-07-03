@@ -9,6 +9,7 @@ export const ProductListByCategory = () => {
     const context = useContext(ProductContext)
     const { category, productsByCategory, loading, error } = context
 
+
     return (
         <>
             {loading && <LoadingSpinner />}
@@ -24,7 +25,7 @@ export const ProductListByCategory = () => {
                         {productsByCategory.map((product) => {
                             return (
                                 <ProductCard
-                                    key={product.title}
+                                    key={product.id}
                                     product={product}
                                 />
                             )

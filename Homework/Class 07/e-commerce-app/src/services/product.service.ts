@@ -54,6 +54,7 @@ export class ProductService {
       })
       if (response.ok) {
         const data: ProductWithId = await response.json();
+        data.id = Date.now()
         console.log(data)
         return data
       }

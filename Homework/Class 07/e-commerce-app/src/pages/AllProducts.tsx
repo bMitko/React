@@ -21,7 +21,7 @@ export default function AllProductsPage() {
                 {allProducts.map((product) => {
                     return (
                         <ProductCard
-                            key={product.title}
+                            key={product.id}
                             product={product} />
                     )
                 })}
